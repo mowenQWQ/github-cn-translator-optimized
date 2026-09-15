@@ -1,0 +1,94 @@
+{
+   "checkingStatus": {
+      "description": "检查状态",
+      "message": "正在检查状态..."
+   },
+   "commonTerms": {
+      "description": "通用术语翻译模块",
+      "message": "通用术语"
+   },
+   "commonTermsDesc": {
+      "description": "通用术语描述",
+      "message": "通用操作和常用词汇"
+   },
+   "disableTranslation": {
+      "description": "禁用翻译",
+      "message": "禁用翻译"
+   },
+   "enableTranslation": {
+      "description": "启用翻译",
+      "message": "启用翻译"
+   },
+   "extDescription": {
+      "description": "扩展描述",
+      "message": "将 GitHub 网站界面、功能模块术语和官方文档翻译为简体中文，让中文用户更轻松地使用 GitHub。"
+   },
+   "extName": {
+      "description": "扩展名称",
+      "message": "GitHub 中文翻译"
+   },
+   "featureModules": {
+      "description": "功能模块翻译",
+      "message": "功能模块"
+   },
+   "featureModulesDesc": {
+      "description": "功能模块描述",
+      "message": "Issues、PR、Actions 等术语"
+   },
+   "officialDocs": {
+      "description": "文档翻译模块",
+      "message": "官方文档"
+   },
+   "officialDocsDesc": {
+      "description": "官方文档描述",
+      "message": "docs.github.com 文档翻译"
+   },
+   "pleaseUseOnGithub": {
+      "description": "非 GitHub 页面提示",
+      "message": "请在 GitHub 页面上使用此插件"
+   },
+   "pluginFooter": {
+      "description": "页脚文本",
+      "message": "GitHub 中文翻译插件"
+   },
+   "supportedSites": {
+      "description": "支持的站点标题",
+      "message": "支持站点"
+   },
+   "toggleTranslation": {
+      "description": "切换翻译开关",
+      "message": "切换翻译"
+   },
+   "translationDisabled": {
+      "description": "翻译已禁用状态",
+      "message": "翻译已禁用"
+   },
+   "translationDisabledStatus": {
+      "description": "禁用状态文本",
+      "message": "翻译已禁用 - 页面显示原始英文"
+   },
+   "translationEnabled": {
+      "description": "翻译已启用状态",
+      "message": "翻译已启用"
+   },
+   "translationEnabledStatus": {
+      "description": "启用状态文本",
+      "message": "翻译已启用 - 页面正在自动翻译中"
+   },
+   "translationModules": {
+      "description": "翻译模块标题",
+      "message": "翻译模块"
+   },
+   "translationStatus": {
+      "description": "翻译状态标签",
+      "message": "翻译状态"
+   },
+   "uiElements": {
+      "description": "UI 界面翻译模块",
+      "message": "界面元素"
+   },
+   "uiElementsDesc": {
+      "description": "UI 模块描述",
+      "message": "导航、按钮、文本等 UI 组件"
+   }
+}

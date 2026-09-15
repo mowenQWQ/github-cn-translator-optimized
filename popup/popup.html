@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 中文翻译</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <rect width="24" height="24" rx="6" fill="#24292f"/>
+          <text x="12" y="16" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial">译</text>
+        </svg>
+        <h1>GitHub 中文翻译</h1>
+      </div>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <main class="popup-main">
+      <div class="status-card">
+        <div class="status-row">
+          <span class="status-label">翻译状态</span>
+          <label class="toggle-switch" id="toggleSwitch">
+            <input type="checkbox" id="toggleBtn">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="status-text" id="statusText">
+          正在检查状态...
+        </div>
+        <div class="status-sub" id="aiStatusText" style="display:none"></div>
+      </div>
+
+      <div class="ai-card" id="aiCard" style="display:none">
+        <div class="status-row">
+          <span class="status-label">🤖 AI 智能翻译</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="aiToggleBtn">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="ai-detail">
+          <span id="aiDetailText">未配置</span>
+        </div>
+        <div class="ai-actions">
+          <button class="link-btn" id="openSettingsBtn">⚙️ API 设置</button>
+          <span class="ai-badge" id="aiCacheBadge" style="display:none"></span>
+        </div>
+      </div>
+
+      <div class="modules-section">
+        <h2 class="section-title">翻译模块</h2>
+        <div class="module-list">
+          <div class="module-item">
+            <span class="module-icon">🖥️</span>
+            <div class="module-info">
+              <span class="module-name">界面元素</span>
+              <span class="module-desc">导航、按钮、文本等 UI 组件</span>
+            </div>
+            <span class="module-count" id="uiCount">-</span>
+          </div>
+          <div class="module-item">
+            <span class="module-icon">📦</span>
+            <div class="module-info">
+              <span class="module-name">功能模块</span>
+              <span class="module-desc">Issues、PR、Actions 等术语</span>
+            </div>
+            <span class="module-count" id="moduleCount">-</span>
+          </div>
+          <div class="module-item">
+            <span class="module-icon">📖</span>
+            <div class="module-info">
+              <span class="module-name">官方文档</span>
+              <span class="module-desc">docs.github.com 文档翻译</span>
+            </div>
+            <span class="module-count" id="docsCount">-</span>
+          </div>
+          <div class="module-item">
+            <span class="module-icon">🔤</span>
+            <div class="module-info">
+              <span class="module-name">通用术语</span>
+              <span class="module-desc">通用操作和常用词汇</span>
+            </div>
+            <span class="module-count" id="commonCount">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="supported-sites">
+        <h2 class="section-title">支持站点</h2>
+        <div class="site-tags">
+          <span class="site-tag">github.com</span>
+          <span class="site-tag">docs.github.com</span>
+          <span class="site-tag">gist.github.com</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="popup-footer">
+      <span class="footer-text">GitHub 中文翻译插件</span>
+    </footer>
+  </div>
+  <script src="../locales/common.js"></script>
+  <script src="../locales/ui.js"></script>
+  <script src="../locales/modules.js"></script>
+  <script src="../locales/docs.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

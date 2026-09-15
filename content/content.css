@@ -1,0 +1,28 @@
+[data-gh-cn="1"] {
+
+}
+
+.gh-cn-toggle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  border-radius: 10px;
+  background: #1f883d;
+  color: white;
+  margin-left: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.gh-cn-toggle-badge.disabled {
+  background: #cf222e;
+}
+
+.gh-cn-translation-hint {
+  font-size: 11px;
+  color: #656d76;
+  margin-left: 4px;
+  font-style: italic;
+}

@@ -1,0 +1,41 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "48": "icons/icon48.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "GitHub 中文翻译"
+   },
+   "author": "GitHub中文翻译插件",
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "content/content.css" ],
+      "js": [ "locales/common.js", "locales/ui.js", "locales/modules.js", "locales/docs.js", "content/translator.js", "content/ai-translator.js", "content/observer.js", "content/content.js" ],
+      "matches": [ "https://github.com/*", "https://*.github.com/*", "https://docs.github.com/*", "https://gist.github.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "zh_CN",
+   "description": "__MSG_extDescription__",
+   "homepage_url": "https://github.com",
+   "host_permissions": [ "https://github.com/*", "https://*.github.com/*", "https://docs.github.com/*", "https://gist.github.com/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpMRhcuywYvP6y2x47S/PMEyGhYr3LV5kqPcFk75hXAcV99igOAIIMB8YvqAsrMoW3FqsRVQbYcTGlG06IHFr3nw1xwhSlH3M/26ytNAFIIM+XFHwfHB5jE51Ig3A92gHHq/4+pDI/5k7Vc++tvTG5qQbbv1E50AWkCB/3iWQ3DN8eO/0IWCmkzoEDotaW41wTdS2DJBjxaK4EdTJPBzey16vs22mDzq4/jONNVxHUmXC01GpMuDO0swXY9B/oQNKiWXAaXULNujZgCRjFI7LtBeYptU8AaLNuOZquUTGG5qadRFxs78sE9ka7dzsFJhmyaQLRwlqIJueoXTMfhYEQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "options_page": "options/options.html",
+   "permissions": [ "storage" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.1.1",
+   "web_accessible_resources": [ {
+      "matches": [ "https://github.com/*", "https://*.github.com/*", "https://docs.github.com/*", "https://gist.github.com/*" ],
+      "resources": [ "locales/*.js" ]
+   } ]
+}

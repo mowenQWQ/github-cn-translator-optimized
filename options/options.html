@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub 中文翻译 - 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="settings-container">
+    <header class="settings-header">
+      <div class="header-left">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <rect width="24" height="24" rx="6" fill="#24292f"/>
+          <text x="12" y="16" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial">译</text>
+        </svg>
+        <div>
+          <h1>GitHub 中文翻译</h1>
+          <p class="subtitle">AI 翻译设置</p>
+        </div>
+      </div>
+      <a class="back-link" href="#" id="backToPopup">← 返回</a>
+    </header>
+
+    <main class="settings-main">
+      <section class="section">
+        <h2 class="section-title">基本设置</h2>
+
+        <div class="card">
+          <div class="field">
+            <label class="field-label" for="dictToggle">词库翻译</label>
+            <div class="field-control">
+              <label class="toggle">
+                <input type="checkbox" id="dictToggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="field-hint">使用内置词库翻译（1700+ 条）</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="aiToggle">AI 智能翻译</label>
+            <div class="field-control">
+              <label class="toggle">
+                <input type="checkbox" id="aiToggle">
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="field-hint">对接 AI 大模型翻译词库未覆盖的文本</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="aiSettingsSection">
+        <h2 class="section-title">AI 接口配置</h2>
+
+        <div class="card">
+          <div class="field field-vertical">
+            <label class="field-label" for="apiEndpoint">API 端点地址</label>
+            <input type="text" id="apiEndpoint" class="input" placeholder="https://api.openai.com/v1/chat/completions">
+            <span class="field-desc">兼容 OpenAI Chat Completions 格式的 API 地址</span>
+          </div>
+
+          <div class="field field-vertical">
+            <label class="field-label" for="apiKey">API Key</label>
+            <div class="input-group">
+              <input type="password" id="apiKey" class="input" placeholder="sk-xxxxxxxxxxxxxxxx">
+              <button type="button" id="toggleKeyBtn" class="btn-icon" title="显示/隐藏">👁️</button>
+            </div>
+            <span class="field-desc">你的 API 密钥，仅存储在浏览器本地</span>
+          </div>
+
+          <div class="field field-vertical">
+            <label class="field-label" for="modelSelect">模型</label>
+            <select id="modelSelect" class="input">
+              <option value="gpt-3.5-turbo">gpt-3.5-turbo (OpenAI)</option>
+              <option value="gpt-4o-mini">gpt-4o-mini (OpenAI)</option>
+              <option value="gpt-4o">gpt-4o (OpenAI)</option>
+              <option value="deepseek-chat">deepseek-chat (DeepSeek)</option>
+              <option value="deepseek-reasoner">deepseek-reasoner (DeepSeek)</option>
+              <option value="glm-4-flash">glm-4-flash (智谱)</option>
+              <option value="moonshot-v1-8k">moonshot-v1-8k (Moonshot)</option>
+              <option value="qwen-turbo">qwen-turbo (通义千问)</option>
+              <option value="custom">自定义模型...</option>
+            </select>
+          </div>
+
+          <div class="field field-vertical" id="customModelField" style="display:none">
+            <label class="field-label" for="customModel">自定义模型名称</label>
+            <input type="text" id="customModel" class="input" placeholder="输入模型名称">
+          </div>
+
+          <div class="field field-vertical">
+            <label class="field-label">预设 API 模板</label>
+            <div class="preset-list">
+              <button class="preset-btn" data-preset="openai">OpenAI</button>
+              <button class="preset-btn" data-preset="deepseek">DeepSeek</button>
+              <button class="preset-btn" data-preset="zhipu">智谱 GLM</button>
+              <button class="preset-btn" data-preset="moonshot">Moonshot</button>
+              <button class="preset-btn" data-preset="qwen">通义千问</button>
+              <button class="preset-btn" data-preset="ollama">Ollama (本地)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="field field-vertical">
+            <label class="field-label" for="systemPrompt">系统提示词</label>
+            <textarea id="systemPrompt" class="input textarea" rows="4">你是一名专业翻译。将以下英文翻译为简体中文，上下文为 GitHub 网站界面、文档或代码相关内容。只返回翻译后的中文文本，多项之间用 ||| 分隔。不要添加任何解释。</textarea>
+            <span class="field-desc">发送给 AI 的系统指令，可自定义翻译风格</span>
+          </div>
+
+          <div class="actions">
+            <button type="button" id="testBtn" class="btn btn-secondary">🧪 测试连接</button>
+            <span class="test-result" id="testResult"></span>
+          </div>
+        </div>
+      </section>
+
+      <div class="save-bar">
+        <button type="button" id="saveBtn" class="btn btn-primary">💾 保存设置</button>
+        <span class="save-status" id="saveStatus"></span>
+      </div>
+    </main>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
